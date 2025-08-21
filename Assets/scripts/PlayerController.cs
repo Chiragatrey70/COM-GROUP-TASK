@@ -57,6 +57,13 @@ public class PlayerController : MonoBehaviour
         HandleInteractionCheck();
     }
 
+    // --- NEW PUBLIC METHOD ---
+    // Allows other scripts to enable or disable player movement
+    public void SetMovement(bool canPlayerMove)
+    {
+        canMove = canPlayerMove;
+    }
+
     private void HandleMovement()
     {
         Vector3 forward = transform.TransformDirection(Vector3.forward);
